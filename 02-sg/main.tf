@@ -32,7 +32,7 @@ resource "aws_security_group_rule" "alb_https" {
   to_port           = 443
   protocol          = "tcp"
   cidr_blocks = ["0.0.0.0/0"]
-  security_group_id = module.ingress_alb.sg_id
+  security_group_id = module.alb.sg_id
 }
 
 resource "aws_security_group_rule" "bastion_laptop" {
